@@ -1,1 +1,7 @@
-<h1>Your task</h1>
+<h1><%= @task.title %></h1>
+<%# <br> %>
+<p><%= @task.details %></p>
+<br>
+<p><em><%= @task.completed ? "-Congrats, this task is complete!" : "-This task hasn't been completed yet." %></em></p>
+<br>
+<%= link_to "Back to tasks", index_path %>
