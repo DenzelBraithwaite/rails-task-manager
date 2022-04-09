@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   # As a user, I can find a task
   get '/tasks/:id', to: 'tasks#show', as: :task
   post '/tasks', to: 'tasks#create'
+
+  # As a user, I can edit a task
+  get 'tasks/edit/:id', to: 'tasks#edit', as: :edit_task
+  patch '/tasks/:id', to: 'tasks#update'
 end
