@@ -6,3 +6,4 @@
 <br>
 <%= link_to "Back to tasks", index_path %>
 <%= link_to "Edit task", edit_task_path %>
+<%= link_to "Delete task", task_path(@task), method: :delete, data: { confirm: "Delete the task... FOREVER?!?" } %>

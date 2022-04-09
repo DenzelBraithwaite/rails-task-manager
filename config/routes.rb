@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post '/tasks', to: 'tasks#create'
 
   # As a user, I can edit a task
-  get 'tasks/edit/:id', to: 'tasks#edit', as: :edit_task
+  get 'tasks/:id/edit', to: 'tasks#edit', as: :edit_task
   patch '/tasks/:id', to: 'tasks#update'
+
+  # As a user, I can delete a task
+  delete 'tasks/:id', to: 'tasks#destroy'
 end
